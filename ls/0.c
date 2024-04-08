@@ -15,11 +15,6 @@ int main(void)
 
 	/*Open current directory*/
 	dir = opendir("./");
-	if (dir == NULL)
-	{
-		perror("Unable to open directory");
-		return (1);
-	}
 
 	/*Read directory entries*/
 	while ((entry = readdir(dir)) != NULL)
