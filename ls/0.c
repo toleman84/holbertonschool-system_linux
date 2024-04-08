@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <dirent.h>
 
+/**
+ * main - 0. Let's start with something simple!
+ * @void: that lists the content of the current directory.
+ *
+ * Return: Alwais 0 (Success)
+ */
+
 int main(void)
 {
 	DIR *dir;
