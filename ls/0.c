@@ -5,7 +5,7 @@
 #include <string.h>
 
 /**
- * main - 0. Let's start with something simple!
+ * list_directory - 1. Maybe some parameters?
  * @path: path
  *
  * Return: Alwais 0 (Success)
@@ -20,7 +20,8 @@ void list_directory(const char *path)
 	dir = opendir(path);
 	if (dir == NULL)
 	{
-		fprintf(stderr, "%s: %s %s: %s\n", "./hls", "cannot access", path, strerror(errno));
+		fprintf(stderr, "%s: %s %s: %s\n", "./hls", "cannot access", path, 
+		strerror(errno));
 		exit(EXIT_FAILURE);
 	}
 
