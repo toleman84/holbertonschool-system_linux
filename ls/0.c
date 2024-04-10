@@ -20,8 +20,8 @@ void list_directory(const char *path)
 	dir = opendir(path);
 	if (dir == NULL)
 	{
-		fprintf(stderr, "%s: %s %s: %s\n", "./hls", "cannot access"
-		, path, strerror(errno));
+		fprintf(stderr, "%s: %s %s: %s\n", "./hls", "cannot access",\
+		path, strerror(errno));
 		exit(EXIT_FAILURE);
 	}
 
