@@ -20,7 +20,8 @@ void list_directory(const char *path)
 	dir = opendir(path);
 	if (dir == NULL)
 	{
-		fprintf(stderr, "%s: %s %s: %s\n", "./hls", "cannot access", path, strerror(errno));
+		fprintf(stderr, "%s: %s %s: %s\n", "./hls", "cannot access"
+		, path, strerror(errno));
 		exit(EXIT_FAILURE);
 	}
 
@@ -52,13 +53,16 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		list_directory("./");
-	} else {
+	} else
+	{
 		/* Iterate through command-line arguments */
-		for (i = 1; i < argc; i++) {
+		for (i = 1; i < argc; i++)
+		{
 			printf("%s:\n", argv[i]);
 			list_directory(argv[i]);
 			/*loop for counter an argc: if c == counter so printf*/
-			if (argc > 2) {
+			if (argc > 2)
+			{
 				printf("\n");
 			}
 		}
